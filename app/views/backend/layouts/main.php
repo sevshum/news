@@ -131,8 +131,6 @@ BackendAsset::register($this);
                                 ['label' => Yii::t('app', 'Users'), 'url' => ['/user/users/admin']],
                                 ['label' => Yii::t('app', 'Menus'), 'url' => ['/menu/menus/admin']],
                                 ['label' => Yii::t('app', 'News'), 'url' => ['/blog/posts/admin']],
-                                ['label' => Yii::t('app', 'Categories'), 'url' => ['/category/categories/admin']],
-                                ['label' => Yii::t('app', 'Rbac'), 'url' => ['/rbac/permissions/admin']],
                                 [
                                     'label' => Yii::t('app', 'Comments'),
                                     'url' => ['/comment/comments/admin']
@@ -145,7 +143,6 @@ BackendAsset::register($this);
                             'url' => '#',
                             'items' => [
                                 ['label' => Yii::t('app', 'Admins'), 'url' => ['/admin/users/admin']],
-                                ['label' => Yii::t('app', 'Languages'), 'url' => ['/language/languages/admin']],
                                 ['label' => Yii::t('app', 'Mail templates'), 'url' => ['/mail/templates/admin']],
                                 ['label' => Yii::t('app', 'Settings'), 'url' => ['/settings/items/admin']],
 
