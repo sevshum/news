@@ -129,7 +129,6 @@ BackendAsset::register($this);
                             'url' => '#',
                             'items' => [
                                 ['label' => Yii::t('app', 'Users'), 'url' => ['/user/users/admin']],
-                                ['label' => Yii::t('app', 'Menus'), 'url' => ['/menu/menus/admin']],
                                 ['label' => Yii::t('app', 'News'), 'url' => ['/blog/posts/admin']],
                                 [
                                     'label' => Yii::t('app', 'Comments'),
