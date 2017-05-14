@@ -62,7 +62,7 @@ class PostsController extends \app\modules\core\components\FrontendController
         $dataProvider = new ActiveDataProvider([
             'query' => $query
         ]);
-        if ($lastPostId = Post::find()->orderBy('id DESC')->select('id')->limit(1)->scalar()) {
+        if ($lastPostId = Post::find()->orderBy('id DESC')->select('id')->limit(1)->scalar() && !Yii::$app->user->isGuest) {
             Yii::$app->user->identity->setLastNewsViewed($lastPostId);
         }
 

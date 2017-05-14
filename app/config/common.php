@@ -7,6 +7,7 @@ return [
     'vendorPath' => __DIR__ . '/../../vendor',
     'extensions' => require(__DIR__ . '/../../vendor/yiisoft/extensions.php'),
     'modules' => [
+        'rbac' => ['class' => 'app\modules\rbac\Module'],
         'admin' => ['class' => 'app\modules\admin\Module'],
         'user' => [
             'class' => 'app\modules\user\Module',
@@ -19,7 +20,6 @@ return [
         'category' => ['class' => 'app\modules\category\Module'],
         'blog' => ['class' => 'app\modules\blog\Module'],
         'attachment' => ['class' => 'app\modules\attachment\Module'],
-        'rbac' => ['class' => 'app\modules\rbac\Module'],
         'notifications' => ['class' => 'app\modules\notifications\Module'],
     ],
     'components' => [

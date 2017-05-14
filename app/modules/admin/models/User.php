@@ -268,9 +268,11 @@ class User extends AppActiveRecord implements IdentityInterface
 
             $authManager = \Yii::$app->authManager;
             $role = $authManager->getRole($this->role);
-            $oldRole = $authManager->getRole($changedAttributes['role']);
-            $authManager->revoke($oldRole, $this->getId());
-            $authManager->assign($role, $this->getId());
+            if ($role) {
+                $oldRole = $authManager->getRole($changedAttributes['role']);
+                $authManager->revoke($oldRole, $this->getId());
+                $authManager->assign($role, $this->getId());
+            }
         }
         parent::afterSave($insert, $changedAttributes);
     }
